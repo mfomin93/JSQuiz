@@ -2,14 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Quiz</title>
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>JS Quiz</h1>
-    <p id="questions"></p>
-  <button id="btn0"></button>
-  <button id="btn1"></button>
-  <button id="btn2"></button>
-  <button id="btn3"></button>
+    <div id="container">
+        <div id="start">Start Quiz!</div>
+        <div id="quiz" style="display: none">
+            <div id="question"></div>
+            <!-- <div id="qImg"></div> -->
+            <div id="choices">
+                <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+            </div>
+            <div id="timer">
+                <div id="counter"></div> 
+                <div id="timeGauge"></div>
+            </div>
+            <div id="progress"></div>
+        </div>
+        <div id="scoreContainer" style="display: none"></div>
+    </div>
+    <div>
+        <div id="initials" style="display: none"></div>
+    </div>
+    <div class="small-container">
+
+        <h1 id="initials">Initials</h1>
+    
+        <form>
+          <input id="item" type="text" placeholder="M.F.">
+        </form>
+        <ul></ul>
+        <button>Clear</button>
+      </div>
+    
+      <script src="js/scripts.js"></script>
+    <script src="script.js"></script>
+    <footer>Mark Fomin</footer>
+</body>
 </html>
